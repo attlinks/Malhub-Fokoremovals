@@ -46,6 +46,7 @@ const About = () => {
 
         <div className="flex items-end md:justify-end">
           <p
+            data-aos="fade-up"
             className="mt-[8.8rem] text-right"
             style={{
               fontFamily:

@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WhyUs = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 200,
+      once: true,
+    });
+  }, []);
   return (
     <section className=" w-full bg-white px-6 py-20 text-slate-900">
       <div className=" mx-auto max-w-6xl space-y-16">
-        <div className=" grid gap-12 grid-cols-1 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+        <div
+          data-aos="fade-up"
+          className=" grid gap-12 grid-cols-1 md:grid-cols-[1.2fr_0.8fr] md:items-start"
+        >
           <div className="space-y-6">
             <h2 className="*:text-[48px] font-semibold leading-[1.05] text-slate-950 md:text-[56px]">
               Why choose

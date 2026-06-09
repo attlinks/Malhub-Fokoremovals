@@ -10,6 +10,7 @@ import About from "./components/About";
 import WhyUs from "./components/WhyUs";
 import Footer from "./components/Footer";
 import Team from "./components/Team";
+import Offer2 from "./components/Offer2";
 
 const App = () => {
   return (

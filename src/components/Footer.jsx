@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 700,
+      once: true,
+    });
+  }, []);
   return (
     <footer className="w-full bg-[#0065ff] px-6 py-16 text-white">
       <div className="mx-auto max-w-6xl space-y-8">
         <div className="text-center">
-          <h2 className="text-[42px] font-semibold tracking-[-0.03em] sm:text-[48px]">
+          <h2
+            data-aos="zoom-in"
+            className="text-[42px] font-semibold tracking-[-0.03em] sm:text-[48px]"
+          >
             Get a Free Quote Today
           </h2>
           <p className="mt-3 text-[18px] text-slate-100/90">Ready to move?</p>
@@ -14,7 +25,7 @@ const Footer = () => {
         <div className="overflow-hidden rounded-[2rem] bg-white text-slate-900 shadow-[0_30px_80px_rgba(15,23,42,0.18)]">
           <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr] p-6 md:p-10">
             <div className="space-y-8 rounded-[1.75rem] bg-white p-6 md:p-8">
-              <div className="space-y-6">
+              <div data-aos="fade-right" className="space-y-6 mt-[13rem]">
                 <div className="flex items-center gap-3">
                   <span className="grid h-12 w-12 place-items-center rounded-full bg-[#E8F0FF] text-[#1E6BFF]">
                     <svg
@@ -75,7 +86,13 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="rounded-[1.75rem] bg-[#F3F8FE] p-6 shadow-sm md:p-8">
+            <div
+              data-aos="fade-up"
+              className="rounded-[1.75rem] bg-[#F3F8FE] p-6 shadow-sm md:p-8"
+            >
+              <h3 className="text-center text-2xl font-semibold text-slate-900 mb-6">
+                Client Contact Form
+              </h3>
               <form className="space-y-5">
                 <div>
                   <label className="block text-sm font-semibold text-slate-900">
